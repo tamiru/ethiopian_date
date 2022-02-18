@@ -1,9 +1,9 @@
-# frozen_string_literal: true
 
 require_relative "ethiopian_date/version"
 require "date"
 module EthiopianDate
   class Error < StandardError; end
+
 
   # from http://ethiopic.org/Calendars/
 
@@ -92,7 +92,7 @@ module EthiopianDate
   def jdn_from_gregorian(year, month, day)
     s = (year / 4) - (year - 1) / 4 - (year / 100) + (year - 1) / 100 + (year / 400) - (year - 1) / 400
     t = (14 - month) / 12
-    n = (1 - t) * (59 + s + 30 * (month - 3) + 31 * t * (month - 1) + ((3 * month - 7) / 5)) + day - 1
+    n = 31 * t * (month - 1) + (1 - t) * (59 + s + 30 * (month - 3) + ((3 * month - 7) / 5)) + day - 1
     j = JD_EPOCH_OFFSET_GREGORIAN + 365 * (year - 1) + (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400 + n
     return j
   end
