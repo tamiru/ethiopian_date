@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    ethiopian_date (1.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (13.0.3)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  ethiopian_date!
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.3.7
