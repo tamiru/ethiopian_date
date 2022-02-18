@@ -46,7 +46,16 @@ module EthiopianDate
     jdn = jdn_from_ethiopic(year, month, day, era)
     return gregorian_from_jdn(jdn)
   end
-
+  #@example to_gregorian('19/12/1989')
+  def to_gregorian(d)
+    #dt=d.to_s(:db)
+    if d.present?
+      a = d.to_s.split("/")
+      return fromEthiopicToGregorian(a[2].to_i, a[1].to_i, a[0].to_i)
+    else
+      return nil
+    end
+  end
   #Changes from in_date:GregorianDate to EthiopicDate
   #
   #@api public
