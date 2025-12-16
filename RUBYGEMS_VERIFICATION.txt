@@ -1,0 +1,11 @@
+RubyGems.org Support Request Verification
+
+I am confirming my rubygems.org support request #2107 to update my account details.
+
+This file serves as verification that the owner of this GitHub repository 
+(https://github.com/tamiru/ethiopian_date) is authorized to manage the 
+ethiopian_date gem on RubyGems.org.
+
+Repository: tamiru/ethiopian_date
+Support Request: #2107
+Date: 2025-12-16
